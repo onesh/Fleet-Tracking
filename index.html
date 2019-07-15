@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="http://localhost:8888/app.css"></link>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"?</link>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+    <script type="text/babel" id="appscript" src="http://localhost:8888/app.js"  async defer></script>
+
+
+  </head>
+  <body>
+      <div id="app"></div>
+    <script>
+      var map;
+      function initMap () {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: new google.maps.LatLng(51.508742,-0.120850),
+          zoom: 20
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp3dF1wHY67lVzyyU1Gd4vkvtNid1ksxQ&callback=initMap"
+    async defer></script>
+  </body>
+</html>
